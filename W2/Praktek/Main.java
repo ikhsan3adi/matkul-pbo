@@ -30,6 +30,8 @@ public class Main {
       }
 
     } while (!choice.equals("q") && !choice.equals("Q"));
+
+    sc.close();
   }
 
   private static void cekPemasukanKoperasi() {
