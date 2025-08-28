@@ -15,9 +15,6 @@ public class InventoryManager {
 
   private int currentTransactionNumber = 1;
 
-  public InventoryManager() {
-  }
-
   public InventoryManager(
       ArrayList<Projector> projectors,
       ArrayList<Terminal> terminals,
@@ -27,6 +24,8 @@ public class InventoryManager {
     this.terminals = terminals;
     this.otherItems = otherItems;
     this.students = students;
+
+    this.transactions = new ArrayList<Transaction>();
   }
 
   public ArrayList<Student> getAllStudents() {
@@ -77,6 +76,10 @@ public class InventoryManager {
     return null;
   }
 
+  public ArrayList<Transaction> getTransactions() {
+    return transactions;
+  }
+
   public boolean addStudent(Student student) {
     for (Student s : students)
       if (s.getNim().equals(student.getNim()))
@@ -90,6 +93,11 @@ public class InventoryManager {
     Item item = findItemByCode(itemCode);
 
     if (borrower == null || item == null) {
+      return false;
+    }
+
+    if (!item.available()) {
+      System.out.println("Barang Sedang Dipinjam!");
       return false;
     }
 

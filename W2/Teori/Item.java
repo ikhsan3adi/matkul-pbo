@@ -42,4 +42,8 @@ public class Item {
   public void setBrand(String brand) {
     this.brand = brand;
   }
+
+  public boolean available() {
+    return status == "Tersedia";
+  }
 }

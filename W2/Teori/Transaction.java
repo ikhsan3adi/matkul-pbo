@@ -15,6 +15,8 @@ public class Transaction {
     this.borrowDate = borrowDate;
     this.returnDate = null;
     this.status = "AKTIF";
+
+    this.item.setStatus("Dipinjam");
   }
 
   public Transaction(int number, Item item, Student student, Date borrowDate, Date returnDate) {
@@ -24,6 +26,8 @@ public class Transaction {
     this.borrowDate = borrowDate;
     this.returnDate = returnDate;
     this.status = "AKTIF";
+
+    this.item.setStatus("Dipinjam");
   }
 
   public int getNumber() {
@@ -53,5 +57,7 @@ public class Transaction {
   public void returnItem(Date returnDate) {
     this.returnDate = returnDate;
     this.status = "SELESAI";
+
+    this.item.setStatus("Tersedia");
   }
 }
