@@ -42,10 +42,11 @@ public class Main {
 
   private static void beliBarang() {
     ArrayList<Barang> daftarBarang = koperasi.getDaftarBarang();
-    int i = 0;
+    int i = 1;
 
     for (Barang barang : daftarBarang) {
-      System.out.println("[" + i++ + "] " + barang.getNama());
+      System.out.print("[" + i++ + "] " + barang.getNama());
+      System.out.print("\t(Rp" + barang.getHarga() + ")\n");
     }
 
     System.out.print("Pilih Barang Yang Ingin Dibeli: ");
@@ -59,7 +60,7 @@ public class Main {
 
       sc.nextLine();
 
-      Barang barang = daftarBarang.get(choiceIndex);
+      Barang barang = daftarBarang.get(choiceIndex - 1);
 
       if (quantity > barang.getStok()) {
         System.out.println("Stok barang tidak mencukupi!");
