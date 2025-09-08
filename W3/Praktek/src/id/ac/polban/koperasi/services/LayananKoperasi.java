@@ -21,7 +21,7 @@ public class LayananKoperasi {
     return pemasukan;
   }
 
-  public void tambahPemasukan(long pemasukan) {
+  private void tambahPemasukan(long pemasukan) {
     this.pemasukan += pemasukan;
   }
 
