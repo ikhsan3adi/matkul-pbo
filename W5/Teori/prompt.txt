@@ -1,0 +1,7 @@
+Saya ditugaskan untuk membuat laporan analisa terkait penerapan abstract class dan multiple inheritance menggunakan interface
+
+1. Analisa Kembali code sebelmnya terkait koperasi yang sudah menerapkan inheritance.
+2. Di bagian mana diterapkan interface dan multiple inheritance
+3. Analisa diagram kelas yang dihasilkan yang menerapkan interface dan multiple inheritance
+
+buatkan dahulu struktur dari bagian utama laporan (subbab-subbab nya)
