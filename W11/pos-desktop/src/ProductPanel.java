@@ -91,7 +91,6 @@ public class ProductPanel extends JPanel {
   }
 
   private void addListeners() {
-
     productTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
       @Override
       public void valueChanged(ListSelectionEvent e) {

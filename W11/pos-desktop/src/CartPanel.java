@@ -38,7 +38,6 @@ public class CartPanel extends JPanel {
   }
 
   public void addProductToCart(String id, String name, int price, int qty) {
-
     for (int i = 0; i < cartTableModel.getRowCount(); i++) {
       if (cartTableModel.getValueAt(i, 0).equals(id)) {
 
